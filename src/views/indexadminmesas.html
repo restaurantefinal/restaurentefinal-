@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de mesas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel="stylesheet" href="../public/app/css2/stylesadminmesas.css">
+<link rel="Icon" href="../public/img/Admin2.png" type="image/x-icon" />
+</head>
+<body    style="background-color:#3498DB ;">
+<!-- partial:index.partial.html -->
+
+
+<div class="modal-body text-center"  > <h1> MESAS RESERVADAS   </h1></div>
+<div class="container">
+  <a class="navbar-brand text-white">
+      <% if(typeof datos !== 'undefined'){ %>
+      <h4> <%= datos[0].usuario%></h4>
+      <% } %>
+  </a>
+
+</div>
+<form name="formDatos" method="POST" action="/consultareservaget">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+              <tr>
+                  <th scope="col"> ID MESA</th>
+                  <th scope="col"> FECHA</th>
+                  <th scope="col"> ESTADO</th>
+                  <th scope="col"> MESA</th>
+                  <th scope="col"> PERSONA</th>
+              </tr>
+
+          </thead>
+          <tbody>
+              <% datos2.forEach(element => { %>
+              <tr>
+                  <td>
+                      <%= element['idreserva']%>
+                  </td>
+                  <td>
+               
+                      <%= element['fecha']%>
+                      
+                  </td>
+                  <td>
+                      <%= element['estado']%>
+                  </td>
+                  <td>
+                    <%= element['mesa']%>
+                </td>
+                  <td>
+                    <%= element['usuario']%>
+                </td>
+                 
+              </tr>
+              <% }); %>
+          </tbody>
+      </table>
+
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+</div>
+</form>
+<p class="p"></p>
+  <a class="btn btn-warning"  href="/admin1" style='width:200px; height:50px'  >VOLVER</a>.</p>
+<!-- partial -->
+  <script  src="../public/app/js2/script.js"></script>
+
+</body>
+</html>

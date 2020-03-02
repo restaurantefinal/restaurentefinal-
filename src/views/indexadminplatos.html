@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrar platos</title>
+
+    <link rel="stylesheet" href="../public/app/css2/stylescli.css">
+    <link rel="stylesheet" href="../public/app/css2/style.css">
+    <link rel="Icon" href="../public/img/Admin2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/app/css2/Cssadm.css">
+
+</head>
+
+<body>
+    <br>
+    <div>
+        <a class="btn_login" href="/admin1">ATRAS</a>
+    </div>
+
+
+        <div class="Contenedor2">
+
+            <form name="agregar" method="POST" action="/Agregarplato">
+                <h2>PLATO</h2>
+
+                <% if(typeof datosplato !== 'undefined'){ %>
+                <input  type="hidden"  name="id" value="<%= datosplato[0]['idplato']%>"></input>
+                <% } %>
+                <% if(typeof datosplato === 'undefined'){ %>
+                <input name="id" type="hidden" value="0"> </input>
+                <% } %>
+
+                   
+                <div class="uno">
+                    <% if(typeof datosplato !== 'undefined'){ %>
+                    <input id="Nombreplato" type="text" placeholder="Nombre plato" name="nombreplato1"
+                        value="<%= datosplato[0]['nombreplato']%>" ></input>
+                    <% } %>
+                    <% if(typeof datosplato === 'undefined'){ %>
+                    <input id="Nombreplato" type="text" placeholder="Nombre plato" name="nombreplato1" value=""> </input>
+                    <% } %> 
+                </div>
+                <div class="uno">
+                    <% if(typeof datosplato !== 'undefined'){ %>
+                    <input id="Precioplato" type="number" placeholder="precio plato" name="precioplato1"
+                        value="<%= datosplato[0]['precio']%>" ></input>
+                    <% } %>
+
+                    <% if(typeof datosplato === 'undefined'){ %>
+                    <input id="Precioplato" type="number" placeholder="precio plato" name="precioplato1" value=""></input>
+                    <% } %>
+
+                </div>
+                <div class="uno">
+                    <% if(typeof datosplato !== 'undefined'){ %>
+                    <input id="Descripcion" type="text" placeholder="descripcion1" cols="30" rows="5"
+                        value="<%= datosplato[0]['descripcionplato']%>" name="descripcion1"></input>
+                    <% } %>
+                    <% if(typeof datosplato === 'undefined'){ %>
+                    <textarea id="Descripcion" type="text" placeholder="descripcion1" cols="30" rows="5"
+                        name="descripcion1" value=""></textarea>
+                    <% } %>
+                </div>
+                <div class="uno">
+                    <input id="Imagenplato" name="imagen" type="file" accept=".png, .jpeg, .jpg, .gif" ></input>
+                </div>
+                <button type="submit" class="btn_login" id="btAceptar">Aceptar</button>
+            </form>
+        </div>
+   
+
+    <div class="boxes">
+        <% datos.forEach(element => { %>
+        <div class="box sort">
+          
+            <div class="details">
+
+                <div class="tittle">
+                    <%= element['nombreplato']%>
+                </div>
+                <div class="tittle">
+                    <%= element['descripcionplato']%>
+                </div>
+                <div class="price">
+                    <%= element['precio']%>
+                </div>
+                <div class="price">
+                    <%= element['imagen']%>
+                </div>
+                <a href="/ActualizarEnviarplato/<%= element['idplato']%>">
+                    <button type="button" class="btn btn-default fas fa-edit"></button>
+                </a>
+                <a href="/Eliminarplato/<%= element['idplato']%>">
+                    <button type="button" class="btn btn-default fas fa-trash-alt"></button>
+                </a>
+
+
+            </div>
+        </div>
+        <% }); %>
+    </div>
+
+    <!--Aqui termina-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- partial -->
+
+</body>
+
+</html>

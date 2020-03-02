@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Reservas</title>
+
+  <!-- Custom fonts for this theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="../public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="../public/css/freelancer.min.css" rel="stylesheet">
+  <link href="../public/css/viewclientes.css" rel="stylesheet">
+  <link href="../public/css/calendar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg" style="background: #023f37;">
+
+    <div class="dropdown mb-3">
+            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuBoton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+               
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuBoton">
+                <div class="dropdown-divider"></div>
+                <a href="/indexlogin" class="dropdown-item">CERRAR SESION</a>
+            </div>            
+        </div>
+<div class="container">
+    <a class="navbar-brand text-white">
+        <h3> <%= datos[0].usuario%></h3>
+    </a>
+
+</div>
+<div>
+    <a class="navbar-brand text-white">
+        <h3>Cliente</h3>
+    </a>
+</div>
+</nav>
+
+
+ 
+        <section class="page-section portfolio" id="platos">
+                <div class="container">
+            
+                  <!-- Portfolio Section Heading -->
+                  <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Mesas</h2>
+            
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+            
+                  <!-- Portfolio Grid Items -->
+
+                  
+                  <div class="row">
+                    
+                     
+
+
+                    <!-- Portfolio Item 1 -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#mesa1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                          <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                          </div>
+                        </div>
+                        <img class="img-fluid" src="../public/img/mesas/m1.png" alt="">
+                      </div>
+                    </div>
+            
+                    <!-- Portfolio Item 2 -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#mesa2">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                          <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                          </div>
+                        </div>
+                        <img class="img-fluid" src="../public/img/mesas/m2.png" alt="">
+                      </div>
+                    </div>
+            
+                    <!-- Portfolio Item 3 -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#mesa3">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                          <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                          </div>
+                        </div>
+                        <img class="img-fluid" src="../public/img/mesas/m3.png" alt="">
+                      </div>
+                    </div>
+            
+                    <!-- Portfolio Item 4 -->
+                    <div class="col-md-6 col-lg-3">
+                      <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#mesa4">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                          <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                          </div>
+                        </div>
+                        <img class="img-fluid" src="../public/img/mesas/m4.png" alt="">
+                      </div>
+                    </div>
+            
+                  <!-- /.row -->
+                 
+            </div>
+
+            
+        </section>
+
+
+      
+        <form id="Registroreservas" name="Registroreservas" method="POST" action="/addreservas/<%= datos[0].idpersona%>">
+        <div class="portfolio-modal modal fade" id="mesa1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                  <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </button>
+                    <div class="modal-body text-center">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-lg-8">
+                            <!-- Portfolio Modal - Title -->
+                            <!-- Icon Divider -->
+                            <div class="divider-custom">
+                              <div class="divider-custom-line"></div>
+                              <div class="divider-custom-icon">
+                                <i class="fas fa-star"></i>
+                              </div>
+                              <div class="divider-custom-line"></div>
+                            </div>
+                            <div class="wrapper">
+                             
+                               <input  name="fecha"  type="date"    min="2020-03-01"    max="2020-11-11"  value="">  
+                               <input  id="1"  type="text"  hidden=""  value="1">               
+                              </div>
+                              <script> 
+                              function pasar()
+                                {
+                                document.getElementById("rece").value = document.getElementById("1").value;
+                                }</script>
+                            
+                            <button class="btn btn-primary" onclick="pasar()" data-dismiss="modal">
+                             
+                              LISTO
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+
+        <div class="portfolio-modal modal fade" id="mesa2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                    <i class="fas fa-times"></i>
+                  </span>
+                </button>
+                <div class="modal-body text-center">
+                  <div class="container">
+                    <div class="row justify-content-center">
+                      <div class="col-lg-8">
+                        <!-- Portfolio Modal - Title -->
+                        <!-- Icon Divider -->
+                        <div class="divider-custom">
+                          <div class="divider-custom-line"></div>
+                          <div class="divider-custom-icon">
+                            <i class="fas fa-star"></i>
+                          </div>
+                          <div class="divider-custom-line"></div>
+                        </div>
+                        <div class="wrapper">
+                         
+                               <input  name="fecha"  type="date" min="2020-03-01"  max="2020-11-11"  value="2">    </input>  
+                               <input  id="2"  type="text"  hidden=""  value="2">            
+                          </div>
+                          <script> 
+                            function pasar2()
+                              {
+                              document.getElementById("rece").value = document.getElementById("2").value;
+                                   
+                              }</script>
+                          <br>
+                        <button class="btn btn-primary"  onclick="pasar2()" data-dismiss="modal">
+                          <i class="fas fa-times fa-fw"></i>
+                          LISTO
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+        <div class="portfolio-modal modal fade" id="mesa3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <div class="wrapper">
+                      
+                    <input  name="fecha"   type="date" min="2020-03-01" max="2020-11-11"  value="" >    </input>   
+                    <input  id="3"  type="text" hidden=""   value="3">        
+                         </div>
+                         <script> 
+                            function pasar3()
+                              {
+                              document.getElementById("rece").value = document.getElementById("3").value;
+                              
+                              }</script>    
+                
+                
+               
+            
+                  <br>
+                <button class="btn btn-primary" onclick="pasar3()"  data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  LISTO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+
+
+       
+
+        <div class="portfolio-modal modal fade" id="mesa4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <div class="wrapper">
+                     
+                    <input   name="fecha"  type="date" min="2020-03-01" max="2020-11-11"  value="">    </input>     
+                    <input  id="4" hidden="" type="text"   value="4">        
+                  </div>
+                  <script> 
+                    function pasar4()
+                      {
+                      document.getElementById("rece").value = document.getElementById("4").value;
+                       
+                      }</script>    
+
+                  <br>
+                <button class="btn btn-primary"  onclick="pasar4()" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                LISTO
+                </button>
+          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+   
+
+
+    
+
+        <input  id="rece"  name="mesitas"  hidden=""    value=""  >    </input>  
+
+        <div class="modal-body text-center"  > 
+           <button class="btn btn-primary" style='width:300px; height:100px'  >    
+            <H1> CONFIRMAR</H1>
+        </button>
+      </div>
+      </form>
+      
+
+      
+        <!-- Bootstrap core JavaScript -->
+  <script src="../public/vendor/jquery/jquery.min.js"></script>
+  <script src="../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../public/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="../public/js/jqBootstrapValidation.js"></script>
+  <script src="../public/js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../public/js/freelancer.min.js"></script>
+  
+
+    <!-- Vue -->
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  
+
+  </body>
+</html>

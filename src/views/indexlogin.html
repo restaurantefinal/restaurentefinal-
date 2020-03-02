@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INICIAR SESION</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+    <link rel="stylesheet" href="../public/app/css2/login_view.css">
+    <link rel="Icon" href="../public/img/Login.png" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar
+                sesion</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Crear
+                Cuenta</label>
+            <div class="login-form">
+
+                <div class="sign-in-htm">
+                    <form name="IngrasarDatos" method="POST" action="/ValidarSesion" >
+                        <div class="group">
+                            <label for="user" class="label">Usuario</label>
+                            <input id="user" name="usuario" type="text" class="input" name="usuario">
+
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Contraseña</label>
+                            <input id="pass" type="password" class="input" data-type="password" name="contrasenia">
+                        </div>
+
+                        <div class="group">
+                            <button class="button">Ingresar</button>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="/">VOLVER A PRINCIPAL</a>
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <div class="sign-up-htm">
+                    <form id="RegistroDatos" name="RegistroDatos" method="POST" action="/addpersona">
+                        <div class="group">
+                            <label for="user" class="label">Usuario</label>
+                            <input id="user2" name="usuario" type="text" class="input" value="">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Contraseña</label>
+                            <input id="pass2" name="contrasenia" type="password" class="input" value="">
+                        </div>
+
+                        <div class="group">
+                            <label for="pass" class="label">EMAIL</label>
+                            <input id="email" name="email" type="email" class="input" value="">
+                        </div>
+                        <div class="group">
+
+                            <button id="botonregistro" class="button">CREAR </button>
+                        </div>
+
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">¿YA TIENES CUENTA?</a>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    
+</body>
+
+</html>
